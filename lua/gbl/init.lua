@@ -1,10 +1,11 @@
-require("gbl.set")
 require("gbl.remap")
+require("gbl.set")
+require("gbl.aucmd")
 require("gbl.packer")
 
---00-- DO NOT INCLUDE THIS
---00vim.opt.rtp:append("~/personal/streamer-tools")
---00-- DO NOT INCLUDE THIS
+-- DO NOT INCLUDE THIS
+vim.opt.rtp:append("~/personal/streamer-tools")
+-- DO NOT INCLUDE THIS
 
 --local augroup = vim.api.nvim_create_augroup
 --local ThePrimeagenGroup = augroup('ThePrimeagen', {})
@@ -13,18 +14,18 @@ require("gbl.packer")
 --local yank_group = augroup('HighlightYank', {})
 
 function R(name)
-    require("plenary.reload").reload_module(name)
+  require("plenary.reload").reload_module(name)
 end
 
----autocmd('TextYankPost', {
---    group = yank_group,
---    pattern = '*',
---    callback = function()
---        vim.highlight.on_yank({
---            higroup = 'IncSearch',
---            timeout = 40,
---        })
---    end,
+--autocmd('TextYankPost', {
+--  group = yank_group,
+--  pattern = '*',
+--  callback = function()
+--    vim.highlight.on_yank({
+--      higroup = 'IncSearch',
+--      timeout = 40,
+--    })
+--  end,
 --})
 --
 --autocmd({"BufWritePre"}, {
